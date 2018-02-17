@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)file:///tmp/table.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<table id="customers">
+<colgroup>
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+<col width="6%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">&nbsp;</th>
+<th class="head stub">&nbsp;</th>
+<th class="head"><a class="reference external" href="https://github.com/chainer/chainer">Chainer</a></th>
+<th class="head"><a class="reference external" href="https://github.com/pytorch/pytorch">PyTorch</a></th>
+<th class="head"><a class="reference external" href="https://github.com/tensorflow/tensorflow">TensorFlow</a></th>
+<th class="head"><a class="reference external" href="https://github.com/Theano/Theano">Theano</a>-based</th>
+<th class="head"><a class="reference external" href="https://github.com/bvlc/caffe">Caffe1</a>/<a class="reference external" href="https://github.com/caffe2/caffe2">Caffe2</a></th>
+<th class="head"><a class="reference external" href="https://github.com/torch/torch">Torch7</a></th>
+<th class="head"><a class="reference external" href="https://github.com/dmlc/mxnet">MXNet</a></th>
+<th class="head"><a class="reference external" href="https://github.com/clab/dynet">DyNet</a></th>
+<th class="head"><a class="reference external" href="https://github.com/PaddlePaddle/Paddle">PaddlePaddle</a></th>
+<th class="head"><a class="reference external" href="https://github.com/deeplearning4j/deeplearning4j">DL4J</a></th>
+<th class="head"><a class="reference external" href="https://github.com/Microsoft/cntk">CNTK</a></th>
+<th class="head"><a class="reference external" href="https://github.com/NervanaSystems/neon">neon</a></th>
+<th class="head"><a class="reference external" href="https://github.com/denizyuret/Knet.jl">Knet.jl</a></th>
+<th class="head"><a class="reference external" href="https://github.com/pjreddie/darknet">Darknet</a></th>
+<th class="head"><a class="reference external" href="https://github.com/explosion/thinc">Thinc</a></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">Basics</th>
+<th class="stub">Language</th>
+<td>Python</td>
+<td>Python</td>
+<td>Python</td>
+<td>Python</td>
+<td>Python/C++/ MATLAB</td>
+<td>LuaJIT</td>
+<td>Python/others</td>
+<td>Python/C++</td>
+<td>Python/C++</td>
+<td>Java</td>
+<td>BrainScript/ Python/C++</td>
+<td>Python</td>
+<td>Julia</td>
+<td>C</td>
+<td>Python</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Approach</th>
+<td>define-by-run</td>
+<td>define-by-run</td>
+<td>symbolic autograd</td>
+<td>symbolic autograd</td>
+<td>static</td>
+<td>static/ manual grads</td>
+<td>symbolic autograd/ manual grads/ define-by-run <a class="footnote-reference" href="file:///tmp/table.html#id6" id="id1">[1]</a></td>
+<td>define-by-run</td>
+<td>symbolic autograd</td>
+<td>static/ manual grads/ symbolic autograd <a class="footnote-reference" href="file:///tmp/table.html#id7" id="id2">[2]</a></td>
+<td>static/ symbolic autograd</td>
+<td>static/ symbolic autograd <a class="footnote-reference" href="file:///tmp/table.html#id8" id="id3">[3]</a></td>
+<td>define-by-run</td>
+<td>static</td>
+<td>callback-based define-by-run</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">CPU backend package</th>
+<td>NumPy</td>
+<td><a class="reference external" href="https://github.com/torch/torch">TH</a></td>
+<td><a class="reference external" href="https://github.com/PX4/eigen">Eigen</a></td>
+<td>NumPy</td>
+<td>&nbsp;</td>
+<td>TH</td>
+<td><a class="reference external" href="https://github.com/dmlc/mshadow">mshadow</a></td>
+<td>Eigen</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/deeplearning4j/nd4j">ND4J</a></td>
+<td>&nbsp;</td>
+<td>NumPy</td>
+<td><a class="reference external" href="https://github.com/julialang/julia">Julia</a></td>
+<td>&nbsp;</td>
+<td>NumPy</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">GPU backend package</th>
+<td><a class="reference external" href="https://github.com/cupy/cupy">CuPy</a></td>
+<td><a class="reference external" href="https://github.com/torch/cutorch">THC</a></td>
+<td>Eigen</td>
+<td><a class="reference external" href="https://github.com/Theano/libgpuarray">libgpuarray</a></td>
+<td>&nbsp;</td>
+<td>THC</td>
+<td>mshadow</td>
+<td>Eigen</td>
+<td>&nbsp;</td>
+<td>ND4J</td>
+<td>&nbsp;</td>
+<td>neon</td>
+<td>KnetArrays</td>
+<td>&nbsp;</td>
+<td>CuPy</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Primary sponsor</th>
+<td>Preferred Networks</td>
+<td>Facebook</td>
+<td>Google</td>
+<td>MILA</td>
+<td>Facebook</td>
+<td>Facebook</td>
+<td>Amazon/Apache</td>
+<td>CMU</td>
+<td>Baidu</td>
+<td>Skymind</td>
+<td>Microsoft</td>
+<td>Intel Nervana</td>
+<td>Koç University</td>
+<td>Joe Redmon</td>
+<td>Explosion AI</td>
+</tr>
+<tr class="row-odd"><th class="stub">NNs</th>
+<th class="stub">CNNs</th>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>partial</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>partial</td>
+<td>full</td>
+<td>none</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">RNNs</th>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>partial</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>partial</td>
+<td>partial</td>
+<td>partial</td>
+<td>partial</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Reverse-mode autograd</th>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/twitter/torch-autograd">torch-autograd</a></td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td><a class="reference external" href="https://github.com/NervanaSystems/ngraph">ngraph</a></td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>with closures</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Forward-mode autograd</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/renmengye/tensorflow-forward-ad">tensorflow-forward-ad</a></td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Higher-order grads</th>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Variable-length loops</th>
+<td>native</td>
+<td>native</td>
+<td>while_loop</td>
+<td>scan</td>
+<td>RNNs only</td>
+<td>native</td>
+<td>2017</td>
+<td>native</td>
+<td>RNNs only</td>
+<td>none</td>
+<td>dynamic axis</td>
+<td>none</td>
+<td>native</td>
+<td>none</td>
+<td>native</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Different architectures per batch</th>
+<td>native</td>
+<td>native</td>
+<td><a class="reference external" href="https://github.com/tensorflow/fold">fold</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>torch-autograd</td>
+<td><a class="reference external" href="https://github.com/dmlc/MinPy">MinPy</a></td>
+<td>native</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>native</td>
+<td>&nbsp;</td>
+<td>native</td>
+</tr>
+<tr class="row-even"><th class="stub">Performance</th>
+<th class="stub">cuDNN support</th>
+<td>full</td>
+<td>full</td>
+<td>partial</td>
+<td>partial</td>
+<td>full</td>
+<td>full</td>
+<td>full</td>
+<td>partial</td>
+<td>full</td>
+<td>partial</td>
+<td>full</td>
+<td>N/A <a class="footnote-reference" href="file:///tmp/table.html#id9" id="id4">[4]</a></td>
+<td>&nbsp;</td>
+<td>partial</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">CPU/GPU generic backend</th>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>Y</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Multi-GPU data parallelism</th>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Multi-GPU model parallelism</th>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Multiprocessing <a class="footnote-reference" href="file:///tmp/table.html#id10" id="id5">[5]</a></th>
+<td>full</td>
+<td>partial</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>full</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Distributed training</th>
+<td><a class="reference external" href="https://github.com/chainer/chainermn">ChainerMN</a></td>
+<td>THD</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>2017</td>
+<td><a class="reference external" href="https://github.com/twitter/torch-distlearn">torch-distlearn</a></td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>Y</td>
+<td>Spark</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><th class="stub">Misc</th>
+<th class="stub">Runtime debugging</th>
+<td>debug mode, typechecking, pdb</td>
+<td>pdb</td>
+<td>tfdbg</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Monitor</td>
+<td>pdb</td>
+<td>&nbsp;</td>
+<td>Java debuggers</td>
+<td>cntk.debugging</td>
+<td>&nbsp;</td>
+<td>Gallium.jl</td>
+<td>gdb</td>
+<td>pdb</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Trainer abstraction</th>
+<td>native</td>
+<td><a class="reference external" href="https://github.com/pytorch/tnt">tnt</a></td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/mila-udem/blocks">Blocks</a>, <a class="reference external" href="https://github.com/Lasagne/Lasagne">Lasagne</a>, <a class="reference external" href="https://github.com/fchollet/keras">Keras</a></td>
+<td>native</td>
+<td><a class="reference external" href="https://github.com/torchnet/torchnet">torchnet</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>native</td>
+<td>native</td>
+<td>native</td>
+<td>native</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>native</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Reporter abstraction</th>
+<td>native</td>
+<td>tnt</td>
+<td>native</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>torchnet</td>
+<td>native</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>native</td>
+<td>native</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><th class="stub">&nbsp;</th>
+<th class="stub">Web interface</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/tensorflow/tensorboard">TensorBoard</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>DL4J-UI</td>
+<td>&nbsp;</td>
+<td>Nervana Cloud</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><th class="stub">&nbsp;</th>
+<th class="stub">Graph compilation engine</th>
+<td>&nbsp;</td>
+<td>2017</td>
+<td><a class="reference external" href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/compiler/xla/">XLA</a></td>
+<td>&nbsp;</td>
+<td>2017</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="https://github.com/dmlc/nnvm">NNVM</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>ngraph</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</body></html>
